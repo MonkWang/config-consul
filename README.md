@@ -8,7 +8,7 @@
 ## Installation
 
 ~~~base
-composer require friendsofhyperf/config-consul
+composer require czan/config-consul
 ~~~
 
 ## Configure
