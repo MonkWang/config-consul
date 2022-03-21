@@ -1,0 +1,37 @@
+{
+    "name": "czan/config-consul",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4",
+        "hyperf/config-center": "3.0.*",
+        "hyperf/consul": "3.0.*",
+        "hyperf/utils": "3.0.*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "hyperf/di": "3.0.*",
+        "hyperf/process": "3.0.*",
+        "phpstan/phpstan": "^1.0",
+        "swoole/ide-helper": "dev-master"
+    },
+    "description": "Config extension for Hyperf.",
+    "autoload": {
+        "psr-4": {
+            "Czan\\ConfigConsul\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "analyse": "phpstan analyse --memory-limit 300M -l 0 -c phpstan.neon ./src",
+        "cs-fix": "php-cs-fixer fix $1"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Czan\\ConfigConsul\\ConfigProvider"
+        }
+    }
+}
