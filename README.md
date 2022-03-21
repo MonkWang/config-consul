@@ -19,7 +19,7 @@ composer require friendsofhyperf/config-consul
 return [
     'drivers' => [
         'consul' => [
-            'driver' => FriendsOfHyperf\ConfigConsul\ConsulDriver::class,
+            'driver' => Czan\ConfigConsul\ConsulDriver::class,
             'packer' => Hyperf\Utils\Packer\JsonPacker::class,
             'uri' => env('CONSUL_URI'),
             'namespaces' => [
